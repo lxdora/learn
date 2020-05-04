@@ -1,0 +1,53 @@
+
+<html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- 上述meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+      <!-- Bootstrap CSS -->
+      <title>{{'register' | translate}}</title>
+    </head>
+    <body>
+      <img width="100%" height="100%" src="assets/images/login/bg.jpg" style="position:absolute; left:0; top:0; z-index:-1;"/>
+      <div class="container">
+              <div class="col">
+                <form class="form-login" action="register" method="post">
+                    <h3 class="text-center">{{'register' | translate}}</h3>
+                    <div class="form-group">
+                      <label for="id_username">{{'username'|translate}}:</label>
+                      <input type="text" [(ngModel)]="userName" name="userName" class="form-control" id="id_username" placeholder="Username" autofocus required>
+                    </div>
+                    <div class="form-group">
+                      <label for="id_password">{{'password'|translate}}:</label>
+                      <input type="password" [(ngModel)]="password" name="password" class="form-control" id="id_password" placeholder="Password" required="required">
+                    </div>
+                    <div class="form-group">
+                      <label for="id_repassword">{{'please input password again'|translate}}:</label>
+                      <input type="password" [(ngModel)]="rePassword" (ngModelChange)="checkPasswordDiff()" name="password" class="form-control" id="id_repassword" placeholder="Password" required>
+                      <p style="color:red;font-size: 16px; font-weight: bold;" *ngIf="passwordDiff">{{"The two passwords are inconsistent" | translate}}</p>
+                    </div>
+                    <div class="form-group">
+                      <label for="id_email">{{'email'|translate}}:</label>
+                      <input type="email" [(ngModel)]="email" name="email" class="form-control" id="id_email" placeholder="email" required>
+                    </div>
+                    <div class="form-group">
+                      <label>{{'sex'|translate}}:</label>
+                      <input style="margin-left: 20px;" type="radio" name="sex" value="1">男
+                      <input style="margin-left: 20px;" type="radio" name="sex" value="0">女
+                    </div>
+                    <!-- <div>
+                      <label for="id_captcha">{{'captcha'|translate}}:</label>
+                      <img [src]="captchaUrl" alt="captcha" (click)="refreshCaptcha()">
+                      <input [(ngModel)]="captcha" name="captcha" required>
+                    </div> -->
+                  <div id="btn-login">
+                      <button type="reset" class="btn btn-danger float-left">{{'reset' | translate}}</button>
+                      <button type="submit" [disabled]="passwordDiff" (click)="register()" class="btn btn-success float-left">{{'register' | translate}}</button>
+                  </div>
+                </form>
+              </div>
+      </div>
+  
+    </body>
+  </html>

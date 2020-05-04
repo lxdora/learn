@@ -1,0 +1,40 @@
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 上述meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap CSS -->
+    <title>{{'login' | translate}}</title>
+  </head>
+  <body>
+    <img width="100%" height="100%" src="assets/images/login/bg.jpg" style="position:absolute; left:0; top:0; z-index:-1;"/>
+    <div class="container">
+            <div class="col">
+              <form class="form-login" action="login" method="post">
+                  <h3 class="text-center">{{'welcome' | translate}}</h3>
+                  <div class="form-group">
+                    <label for="id_username">{{'username'|translate}}:</label>
+                    <input type="text" [(ngModel)]="userName" name="userName" class="form-control" id="id_username" placeholder="Username" autofocus required>
+                  </div>
+                  <div class="form-group">
+                    <label for="id_password">{{'password'|translate}}:</label>
+                    <input type="password" [(ngModel)]="password" name="password" class="form-control" id="id_password" placeholder="Password" required>
+                  </div>
+                  <!-- <div>
+                    <label for="id_captcha">{{'captcha'|translate}}:</label>
+                    <img [src]="captchaUrl" alt="captcha" (click)="refreshCaptcha()">
+                    <input [(ngModel)]="captcha" name="captcha" required>
+                  </div> -->
+                <div id="btn-login">
+                  <button type="submit" (click)="register()" class="btn btn-success float-left">{{'register' | translate}}</button>
+                    <button type="submit" (click)="forgetPassword()" class="btn btn-danger" style="margin-left:40px;">{{'forget password'| translate}}</button>
+                    <button type="submit" (click)="login()" class="btn btn-primary float-right">{{'login' | translate}}</button>
+                </div>
+              </form>
+            </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "index": "index",
+    "login": "login",
+    "logout": "logout",
+    "language": "language",
+    "register": "register",
+    "username": "username",
+    "password": "password",
+    "welcome": "welcome",
+    "forget password": "forget password",
+    "please input username": "please input username",
+    "please input password": "please input password",
+    "captcha": "captcha",
+    "you already login": "you already login",
+    "please input password again": "please input password again",
+    "email": "email",
+    "sex": "sex",
+    "reset": "reset",
+    "The two passwords are inconsistent": "The two passwords are inconsistent"
+
+
+}
