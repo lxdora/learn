@@ -24,7 +24,7 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "angular-localize": "^2.4.0",
     "bootstrap": "~4.4.1",
-    "jquery": "~1.9.1",
+    "jquery": "~3.5.0",
     "ngx-cookie-service": "^3.0.4",
     "ngx-toastr": "^12.0.1",
     "popper.js": "~1.16.0",
